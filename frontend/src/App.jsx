@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import './App.css'
+import Navbar from './Components/Navbar/Navbar'
+import HomePage from './Pages/HomePage/HomePage'
+import AdminLogin from './Pages/Auth/AdminLogin/AdminLogin'
 
 function App() {
   
 
   return (
     <>
-    <div className="container mt-5">
-      <h1 className="text-primary">JobBridge</h1>
-
-      <button className="btn btn-primary">
-        Get Started
-      </button>
-    </div>
+    <Navbar></Navbar>
+    <HomePage></HomePage>
+    <AdminLogin></AdminLogin>
     </>
   )
 }
