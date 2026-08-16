@@ -1,0 +1,771 @@
+.studentLoginPage {
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #141936;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.mainContainer {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 56% 44%;
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.leftPanel {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 60px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.decorCircle {
+  position: absolute;
+
+  left: -80px;
+  top: 80px;
+
+  width: 150px;
+  height: 150px;
+
+  background: #eee8ff;
+
+  border-radius: 50%;
+}
+
+
+/* Small circle */
+
+.smallCircle {
+  position: absolute;
+
+  right: 70px;
+  top: 170px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #e7ddff;
+
+  border-radius: 50%;
+}
+
+
+/* Left content */
+
+.leftContent {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 570px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.leftContent h1 {
+  margin: 45px 0 18px;
+
+  color: #111733;
+
+  font-size: 44px;
+
+  line-height: 1.18;
+
+  letter-spacing: -1px;
+}
+
+.leftContent h1 span {
+  color: #6333ed;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+  max-width: 560px;
+
+  margin-bottom: 32px;
+
+  color: #69718b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+/* Feature icon */
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6333ed;
+
+  background: #eee8ff;
+
+  border-radius: 11px;
+
+  font-size: 23px;
+}
+
+
+/* Feature heading */
+
+.feature h3 {
+  margin: 0 0 5px;
+
+  color: #20263f;
+
+  font-size: 15px;
+}
+
+
+/* Feature text */
+
+.feature p {
+  margin: 0;
+
+  color: #737b93;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   STATS BOX
+===================================================== */
+
+.statsBox {
+  width: 480px;
+
+  max-width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 38px;
+
+  padding: 18px 15px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 25px rgba(42, 30, 95, 0.12);
+}
+
+
+/* Individual stat */
+
+.stat {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* Stat icon */
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  background: #6333ed;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+}
+
+
+/* Stat number */
+
+.stat strong {
+  display: block;
+
+  color: #20263f;
+
+  font-size: 16px;
+}
+
+
+/* Stat text */
+
+.stat small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #777e94;
+
+  font-size: 10px;
+}
+
+
+/* Stat divider */
+
+.statDivider {
+  width: 1px;
+
+  height: 45px;
+
+  margin: 0 10px;
+
+  background: #dedee8;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.rightPanel {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 80px 55px 50px;
+
+  background: #f6f1ff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   STUDENT ICON
+===================================================== */
+
+.studentIconCircle {
+  position: absolute;
+
+  top: -15px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #6333ed;
+
+  border-radius: 50%;
+
+  z-index: 5;
+
+  box-shadow:
+    0 8px 20px rgba(99, 51, 237, 0.25);
+}
+
+
+.studentIcon {
+  font-size: 32px;
+}
+
+
+/* =====================================================
+   LOGIN CONTENT
+===================================================== */
+
+.loginContent {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.loginContent h2 {
+  margin: 0;
+
+  color: #171c39;
+
+  text-align: center;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+/* Subtitle */
+
+.loginSubtitle {
+  margin: 10px 0 35px;
+
+  color: #7b8197;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.loginForm {
+  width: 100%;
+}
+
+
+/* Input group */
+
+.inputGroup {
+  margin-bottom: 23px;
+}
+
+
+/* Labels */
+
+.inputGroup > label,
+.passwordHeader label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #252a43;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* Password header */
+
+.passwordHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.passwordHeader a {
+  color: #6333ed;
+
+  font-size: 12px;
+
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.inputWrapper {
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8e9;
+
+  border-radius: 7px;
+}
+
+
+.inputWrapper:focus-within {
+  border-color: #6333ed;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 51, 237, 0.08);
+}
+
+
+.inputIcon {
+  width: 27px;
+
+  color: #9196a9;
+
+  font-size: 16px;
+}
+
+
+.inputWrapper input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  color: #22263e;
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+
+.inputWrapper input::placeholder {
+  color: #9ba0b1;
+}
+
+
+/* Eye button */
+
+.eyeButton {
+  border: none;
+
+  background: transparent;
+
+  color: #9095a8;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   REMEMBER
+===================================================== */
+
+.rememberRow {
+  margin: 2px 0 21px;
+}
+
+
+.rememberRow label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #666c82;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+
+.rememberRow input {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #6333ed;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.loginButton {
+  width: 100%;
+
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  background: #6333ed;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(99, 51, 237, 0.20);
+}
+
+
+.loginButton:hover {
+  background: #5526d5;
+}
+
+
+.loginButton span {
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   AUTHORIZED ACCESS
+===================================================== */
+
+.authorizedLine {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 25px 0 20px;
+}
+
+
+.authorizedLine span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #ddd7eb;
+}
+
+
+.authorizedLine p {
+  margin: 0;
+
+  color: #8a8fa3;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   SECURITY BOX
+===================================================== */
+
+.securityBox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  border-radius: 8px;
+}
+
+
+.securityIcon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6333ed;
+
+  background: #e8ddff;
+
+  border-radius: 7px;
+}
+
+
+.securityBox p {
+  margin: 0;
+
+  color: #73798f;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   PURPLE DECORATION
+===================================================== */
+
+.purpleShape {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -170px;
+
+  bottom: -170px;
+
+  background: #d2baff;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+.purpleShape::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: 115px;
+
+  top: 55px;
+
+  background: #c6a7ff;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .leftPanel {
+    min-height: auto;
+
+    padding: 45px 35px;
+  }
+
+  .rightPanel {
+    min-height: 650px;
+
+    padding: 80px 35px 50px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .leftPanel {
+    padding: 35px 22px;
+  }
+
+  .leftContent h1 {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .statsBox {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .statDivider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 0;
+  }
+
+  .rightPanel {
+    padding: 80px 22px 50px;
+  }
+
+}

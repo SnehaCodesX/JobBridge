@@ -1,0 +1,511 @@
+.companyRegisterPage {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  color: #19152b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageLayout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 56% 44%;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.leftPanel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 30px 55px;
+  box-sizing: border-box;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 5;
+  max-width: 680px;
+}
+
+.smallTitle {
+  margin: 0 0 12px;
+  color: #6125ED !important;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.leftContent h1 {
+  margin: 0;
+  color: #19152b !important;
+  font-size: 48px;
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.leftContent h1 span {
+  display: block;
+  color: #6125ED !important;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 600px;
+  margin: 18px 0 16px;
+  color: #686176;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ================= DECORATION ================= */
+
+.largeCircle {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  left: -105px;
+  top: 20px;
+  border-radius: 50%;
+  background: #E8DFFF;
+}
+
+.dotOne {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 90px;
+  top: 115px;
+  border-radius: 50%;
+  background: #A98BFF;
+}
+
+.dotTwo {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 45px;
+  top: 135px;
+  border-radius: 50%;
+  background: #C8B8FF;
+}
+
+/* ================= ILLUSTRATION ================= */
+
+.illustration {
+  position: relative;
+  width: 450px;
+  height: 125px;
+  margin: 8px 0 12px;
+}
+
+.laptop {
+  position: absolute;
+  left: 45px;
+  top: 3px;
+  width: 245px;
+}
+
+.laptopTop {
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+  background: #6125ED;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 10px;
+}
+
+.laptopTop span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.laptopScreen {
+  height: 82px;
+  padding: 9px;
+  border: 4px solid #30243A;
+  background: #FAF8FF;
+  position: relative;
+}
+
+.screenHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screenHeader div:first-child {
+  width: 55px;
+  height: 6px;
+  border-radius: 5px;
+  background: #6125ED;
+}
+
+.screenHeader div:last-child {
+  width: 25px;
+  height: 6px;
+  border-radius: 5px;
+  background: #CFC4F4;
+}
+
+.screenLines {
+  margin-top: 9px;
+}
+
+.screenLines span {
+  display: block;
+  width: 110px;
+  height: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: #DBD5E7;
+}
+
+.screenCard {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #6125ED;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.laptopBase {
+  width: 280px;
+  height: 7px;
+  margin-left: -18px;
+  border-radius: 0 0 10px 10px;
+  background: #30243A;
+}
+
+.floatingCard {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 145px;
+  padding: 11px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(97, 37, 237, 0.18);
+}
+
+.floatingCard b {
+  display: block;
+  color: #6125ED;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.floatingCard small {
+  color: #756D7D;
+  font-size: 9px;
+}
+
+/* ================= BENEFITS ================= */
+
+.benefitList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.benefitIcon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #EEE9FF;
+  color: #6125ED;
+}
+
+.benefitIcon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #6125ED;
+}
+
+.benefit h2 {
+  margin: 0 0 3px;
+  color: #19152B;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.benefit p {
+  margin: 0;
+  color: #6D6678;
+  font-size: 11px;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.rightPanel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #FAF8FF;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12px 28px;
+  box-sizing: border-box;
+}
+
+.purpleShape {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  right: -150px;
+  bottom: -150px;
+  border-radius: 50%;
+  background: #BBA7F5;
+}
+
+/* ================= FORM ================= */
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 10;
+  transform: scale(0.92);
+  transform-origin: top center;
+}
+
+.registerCard {
+  width: 100%;
+}
+
+/* ================= REGISTER ICON ================= */
+
+.registerIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #6125ED !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(97, 37, 237, 0.28);
+}
+
+.registerIcon svg {
+  width: 30px;
+  height: 30px;
+  stroke: #ffffff !important;
+}
+
+/* ================= FORM HEADING ================= */
+
+.formTitle {
+  margin: 0;
+  text-align: center;
+  color: #19152B !important;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.formSubtitle {
+  margin: 6px 0 15px;
+  text-align: center;
+  color: #776F80;
+  font-size: 11px;
+}
+
+/* ================= INPUTS ================= */
+
+.inputGroup {
+  margin-bottom: 9px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 4px;
+  color: #251E30;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.inputBox {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid #DED6E3;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.inputBox:focus-within {
+  border-color: #6125ED;
+  box-shadow: 0 0 0 2px rgba(97, 37, 237, 0.10);
+}
+
+.inputBox svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: #6125ED;
+  stroke: #6125ED;
+}
+
+.inputBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #211A29;
+  font-size: 11px;
+}
+
+.inputBox input::placeholder {
+  color: #9B94A2;
+}
+
+/* ================= TERMS ================= */
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 10px 0;
+  color: #716978;
+  font-size: 10px;
+}
+
+.terms input {
+  width: 13px;
+  height: 13px;
+  accent-color: #6125ED;
+}
+
+/* ================= REGISTER BUTTON ================= */
+
+.registerButton {
+  width: 100%;
+  height: 43px;
+  border: none;
+  border-radius: 8px;
+  background: #6125ED !important;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(97, 37, 237, 0.25);
+}
+
+.registerButton:hover {
+  background: #501BC9 !important;
+}
+
+.registerButton span {
+  margin-left: 8px;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 11px 0 7px;
+}
+
+.divider span {
+  height: 1px;
+  flex: 1;
+  background: #DED7E3;
+}
+
+.divider p {
+  margin: 0;
+  color: #8A828F;
+  font-size: 9px;
+}
+
+/* ================= LOGIN BUTTON ================= */
+
+.loginButton {
+  width: 100%;
+  height: 35px;
+  border: 2px solid #6125ED;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #6125ED;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background: #F0EBFF;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .pageLayout {
+    grid-template-columns: 54% 46%;
+  }
+
+  .leftPanel {
+    padding: 25px 35px;
+  }
+
+  .leftContent h1 {
+    font-size: 39px;
+  }
+
+  .rightPanel {
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .companyRegisterPage {
+    height: auto;
+    overflow: visible;
+  }
+
+  .pageLayout {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .leftPanel {
+    height: auto;
+    min-height: 650px;
+  }
+
+  .rightPanel {
+    height: auto;
+    min-height: 650px;
+  }
+}
