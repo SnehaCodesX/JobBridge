@@ -1,0 +1,1365 @@
+/* =========================================================
+   JOBBRIDGE FOOTER
+   PREMIUM 3D / GLASS UI
+========================================================= */
+
+.footer {
+  position: relative;
+
+  width: 100%;
+
+  padding: 55px 0 25px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 90%,
+      rgba(124, 58, 237, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(168, 85, 247, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #faf9ff 48%,
+      #f3efff 100%
+    );
+
+  color: #11152f;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.footerGlowOne,
+.footerGlowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  filter: blur(5px);
+}
+
+
+.footerGlowOne {
+  width: 480px;
+  height: 480px;
+
+  top: 50px;
+  right: -220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.18),
+      rgba(139, 92, 246, 0.05) 50%,
+      transparent 72%
+    );
+
+  animation: footerGlowOne 9s ease-in-out infinite;
+}
+
+
+.footerGlowTwo {
+  width: 420px;
+  height: 420px;
+
+  bottom: -240px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(79, 70, 229, 0.15),
+      rgba(168, 85, 247, 0.05) 50%,
+      transparent 72%
+    );
+
+  animation: footerGlowTwo 11s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOWING WAVES
+========================================================= */
+
+.waveOne,
+.waveTwo {
+  position: absolute;
+
+  width: 110%;
+  height: 130px;
+
+  left: -5%;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+.waveOne {
+  top: 5px;
+
+  border-top: 2px solid rgba(139, 92, 246, 0.18);
+
+  box-shadow:
+    0 -8px 25px rgba(124, 58, 237, 0.08);
+
+  transform: rotate(-1deg);
+
+  animation: waveMove 8s ease-in-out infinite;
+}
+
+
+.waveTwo {
+  top: 15px;
+
+  border-top: 2px solid rgba(192, 38, 211, 0.12);
+
+  transform: rotate(1deg);
+
+  animation:
+    waveMoveTwo 10s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOATING ORBS
+========================================================= */
+
+.floatingOrbOne,
+.floatingOrbTwo,
+.floatingOrbThree {
+  position: absolute;
+
+  border-radius: 50%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(139, 92, 246, 0.22)
+    );
+
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  box-shadow:
+    0 10px 25px rgba(91, 33, 182, 0.10),
+    inset 0 2px 8px rgba(255, 255, 255, 0.95);
+}
+
+
+.floatingOrbOne {
+  width: 20px;
+  height: 20px;
+
+  top: 12%;
+  left: 5%;
+
+  animation: orbFloatOne 6s ease-in-out infinite;
+}
+
+
+.floatingOrbTwo {
+  width: 13px;
+  height: 13px;
+
+  top: 20%;
+  right: 6%;
+
+  animation: orbFloatTwo 7s ease-in-out infinite;
+}
+
+
+.floatingOrbThree {
+  width: 16px;
+  height: 16px;
+
+  bottom: 9%;
+  right: 3%;
+
+  animation: orbFloatThree 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MAIN FOOTER CARD
+========================================================= */
+
+.footerCard {
+  position: relative;
+
+  z-index: 5;
+
+  width: calc(100% - 7%);
+
+  max-width: 1400px;
+
+  margin: 80px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(250, 247, 255, 0.76)
+    );
+
+  border: 1px solid rgba(139, 92, 246, 0.16);
+
+  box-shadow:
+    0 30px 70px rgba(72, 42, 145, 0.10),
+    0 10px 30px rgba(72, 42, 145, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.footerMain {
+  display: grid;
+
+  grid-template-columns:
+    1.05fr
+    1.15fr
+    1.25fr;
+
+  min-height: 265px;
+}
+
+
+/* =========================================================
+   BRAND SECTION
+========================================================= */
+
+.brandSection {
+  padding: 38px 35px;
+
+  border-right:
+    1px solid rgba(124, 58, 237, 0.12);
+}
+
+
+.brandLogo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+
+.logoMark {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 18px;
+
+  color: white;
+
+  font-size: 21px;
+
+  font-weight: 950;
+
+  letter-spacing: -2px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7c3aed,
+      #4f46e5 55%,
+      #c026d3
+    );
+
+  box-shadow:
+    0 10px 25px rgba(91, 33, 182, 0.22),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35);
+
+  transform: rotate(-4deg);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.brandLogo:hover .logoMark {
+  transform:
+    rotate(0deg)
+    translateY(-4px)
+    scale(1.04);
+
+  box-shadow:
+    0 15px 35px rgba(91, 33, 182, 0.30);
+}
+
+
+.brandName {
+  font-size: 32px;
+
+  font-weight: 900;
+
+  letter-spacing: -1.8px;
+
+  color: #11172f;
+}
+
+
+.brandName span {
+  background:
+    linear-gradient(
+      100deg,
+      #7c3aed,
+      #4f46e5,
+      #c026d3
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-size: 200% 200%;
+
+  animation: brandGradient 4s ease infinite;
+}
+
+
+.tagline {
+  margin: 4px 0 18px 70px;
+
+  color: #72798e;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.brandDescription {
+  max-width: 400px;
+
+  margin: 0 0 23px;
+
+  color: #626a83;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.socialIcons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.socialIcons button {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(124, 58, 237, 0.13);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.90),
+      rgba(243, 237, 255, 0.82)
+    );
+
+  color: #6731c9;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px rgba(72, 42, 145, 0.07),
+    inset 0 1px 2px white;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.socialIcons button:hover {
+  transform: translateY(-5px) rotate(-3deg);
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #4f46e5,
+      #c026d3
+    );
+
+  box-shadow:
+    0 12px 25px rgba(91, 33, 182, 0.22);
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.linksSection {
+  padding: 38px 35px;
+
+  border-right:
+    1px solid rgba(124, 58, 237, 0.12);
+}
+
+
+.sectionHeading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 22px;
+}
+
+
+.headingIcon {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: #6d28d9;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4efff,
+      #e8ddff
+    );
+
+  box-shadow:
+    inset 0 1px 2px white,
+    0 6px 14px rgba(109, 40, 217, 0.10);
+}
+
+
+.sectionHeading h3 {
+  margin: 0;
+
+  color: #171b35;
+
+  font-size: 19px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.5px;
+}
+
+
+.linksGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+.linkColumn {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+.linkColumn button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #4d536b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.linkColumn button span {
+  color: #7c3aed;
+
+  font-size: 20px;
+
+  line-height: 0;
+}
+
+
+.linkColumn button:hover {
+  color: #6d28d9;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SUBSCRIBE SECTION
+========================================================= */
+
+.subscribeSection {
+  padding: 38px 35px;
+}
+
+
+.subscribeHeading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+
+.subscribeIcon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 13px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7c3aed,
+      #c026d3
+    );
+
+  box-shadow:
+    0 9px 20px rgba(124, 58, 237, 0.22),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+
+.subscribeHeading h3 {
+  margin: 0 0 5px;
+
+  color: #171b35;
+
+  font-size: 20px;
+
+  font-weight: 900;
+}
+
+
+.subscribeHeading p {
+  margin: 0;
+
+  color: #737a91;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   EMAIL FORM
+========================================================= */
+
+.subscribeForm {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border:
+    1px solid rgba(124, 58, 237, 0.13);
+
+  box-shadow:
+    0 10px 25px rgba(72, 42, 145, 0.06),
+    inset 0 1px 3px rgba(60, 30, 120, 0.03);
+
+  transition:
+    border 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.subscribeForm:focus-within {
+  border-color:
+    rgba(124, 58, 237, 0.35);
+
+  box-shadow:
+    0 0 0 4px rgba(124, 58, 237, 0.06);
+}
+
+
+.emailBox {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding-left: 10px;
+}
+
+
+.emailBox svg {
+  flex-shrink: 0;
+
+  color: #8b5cf6;
+
+  font-size: 13px;
+}
+
+
+.emailBox input {
+  width: 100%;
+
+  height: 40px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #292e46;
+
+  font-family: inherit;
+
+  font-size: 12px;
+}
+
+
+.emailBox input::placeholder {
+  color: #a2a7b6;
+}
+
+
+.subscribeButton {
+  min-width: 125px;
+
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #7c3aed 50%,
+      #c026d3
+    );
+
+  box-shadow:
+    0 7px 0 #cdbcf3,
+    0 13px 22px rgba(91, 33, 182, 0.20),
+    inset 0 1px 2px rgba(255, 255, 255, 0.30);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.subscribeButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 0 #cdbcf3,
+    0 18px 28px rgba(91, 33, 182, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.30);
+}
+
+
+.subscribeButton:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 4px 0 #cdbcf3,
+    0 8px 15px rgba(91, 33, 182, 0.15);
+}
+
+
+.subscribeButton svg {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.subscribeButton:hover svg {
+  transform: translateX(4px) rotate(-10deg);
+}
+
+
+.subscribeMessage {
+  margin: 12px 0 0;
+
+  color: #6d28d9;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footerBottom {
+  min-height: 65px;
+
+  padding: 0 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid rgba(124, 58, 237, 0.13);
+
+  background:
+    rgba(255, 255, 255, 0.30);
+}
+
+
+.copyright {
+  color: #70778d;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+.copyright strong {
+  color: #6334d7;
+}
+
+
+.madeWith {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #626a83;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.madeWith span {
+  color: #c026d3;
+
+  font-size: 14px;
+
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+
+.legalLinks {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.legalLinks button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #70778d;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.legalLinks button:hover {
+  color: #6d28d9;
+}
+
+
+.legalLinks span {
+  color: rgba(124, 58, 237, 0.35);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes footerGlowOne {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-25px, 20px)
+      scale(1.08);
+  }
+}
+
+
+@keyframes footerGlowTwo {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(30px, -20px)
+      scale(1.1);
+  }
+}
+
+
+@keyframes waveMove {
+
+  0%,
+  100% {
+    transform:
+      translateX(0)
+      rotate(-1deg);
+  }
+
+  50% {
+    transform:
+      translateX(-25px)
+      rotate(1deg);
+  }
+}
+
+
+@keyframes waveMoveTwo {
+
+  0%,
+  100% {
+    transform:
+      translateX(0)
+      rotate(1deg);
+  }
+
+  50% {
+    transform:
+      translateX(30px)
+      rotate(-1deg);
+  }
+}
+
+
+@keyframes orbFloatOne {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translateY(-18px)
+      scale(1.12);
+  }
+}
+
+
+@keyframes orbFloatTwo {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(-15px, 20px);
+  }
+}
+
+
+@keyframes orbFloatThree {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translateY(-20px)
+      scale(1.12);
+  }
+}
+
+
+@keyframes brandGradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes heartBeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .footerCard {
+    width: calc(100% - 5%);
+  }
+
+
+  .footerMain {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .brandSection {
+    border-bottom:
+      1px solid rgba(124, 58, 237, 0.12);
+  }
+
+
+  .linksSection {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(124, 58, 237, 0.12);
+  }
+
+
+  .subscribeSection {
+    grid-column: 1 / -1;
+  }
+
+
+  .footerBottom {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 18px 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .footer {
+    padding-top: 35px;
+  }
+
+
+  .footerCard {
+    width: calc(100% - 24px);
+
+    margin-top: 65px;
+
+    border-radius: 22px;
+  }
+
+
+  .footerMain {
+    grid-template-columns: 1fr;
+  }
+
+
+  .brandSection,
+  .linksSection,
+  .subscribeSection {
+    padding: 28px 22px;
+  }
+
+
+  .brandSection {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(124, 58, 237, 0.12);
+  }
+
+
+  .linksSection {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(124, 58, 237, 0.12);
+  }
+
+
+  .subscribeSection {
+    grid-column: auto;
+  }
+
+
+  .brandName {
+    font-size: 27px;
+  }
+
+
+  .logoMark {
+    width: 50px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+
+
+  .tagline {
+    margin-left: 62px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .brandDescription {
+    font-size: 12px;
+  }
+
+
+  .linksGrid {
+    gap: 15px;
+  }
+
+
+  .subscribeForm {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 9px;
+  }
+
+
+  .emailBox {
+    padding: 0 8px;
+  }
+
+
+  .subscribeButton {
+    width: 100%;
+  }
+
+
+  .footerBottom {
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 20px 15px;
+  }
+
+
+  .copyright,
+  .madeWith {
+    white-space: normal;
+
+    text-align: center;
+  }
+
+
+  .legalLinks {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+
+  .floatingOrbOne {
+    left: 3%;
+  }
+
+
+  .floatingOrbTwo {
+    right: 3%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .brandLogo {
+    gap: 9px;
+  }
+
+
+  .brandName {
+    font-size: 24px;
+  }
+
+
+  .logoMark {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+  }
+
+
+  .tagline {
+    margin-left: 55px;
+
+    font-size: 7px;
+  }
+
+
+  .socialIcons {
+    gap: 7px;
+  }
+
+
+  .socialIcons button {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .sectionHeading h3,
+  .subscribeHeading h3 {
+    font-size: 17px;
+  }
+
+
+  .footerBottom {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .footerGlowOne,
+  .footerGlowTwo,
+  .waveOne,
+  .waveTwo,
+  .floatingOrbOne,
+  .floatingOrbTwo,
+  .floatingOrbThree,
+  .brandName span,
+  .madeWith span {
+    animation: none !important;
+  }
+
+
+  .socialIcons button,
+  .subscribeButton,
+  .linkColumn button,
+  .brandLogo .logoMark {
+    transition: none !important;
+  }
+}
+.logoImage {
+  width: 155px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.brandLogo:hover .logoImage {
+  transform: translateY(-3px) scale(1.03);
+  filter: drop-shadow(0 8px 18px rgba(124, 58, 237, 0.25));
+}

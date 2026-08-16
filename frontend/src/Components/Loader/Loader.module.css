@@ -1,0 +1,892 @@
+/* =========================================================
+   JOBBRIDGE LOADER
+   PREMIUM 3D / GLASS / PURPLE THEME
+========================================================= */
+
+.loaderPage {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(124, 58, 237, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(168, 85, 247, 0.14),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #faf9ff 48%,
+      #f3efff 100%
+    );
+
+  color: #11152f;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.glowOne,
+.glowTwo {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(8px);
+
+  z-index: 0;
+}
+
+
+.glowOne {
+  width: 500px;
+  height: 500px;
+
+  top: -250px;
+  right: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.18),
+      rgba(139, 92, 246, 0.06) 50%,
+      transparent 72%
+    );
+
+  animation: glowFloatOne 8s ease-in-out infinite;
+}
+
+
+.glowTwo {
+  width: 450px;
+  height: 450px;
+
+  bottom: -240px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(79, 70, 229, 0.15),
+      rgba(192, 38, 211, 0.05) 50%,
+      transparent 72%
+    );
+
+  animation: glowFloatTwo 10s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
+
+.particle {
+  position: absolute;
+
+  z-index: 2;
+
+  color: #8b5cf6;
+
+  font-weight: 900;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 0 12px rgba(124, 58, 237, 0.30);
+
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+
+.particleOne {
+  top: 22%;
+  left: 34%;
+
+  font-size: 17px;
+}
+
+
+.particleTwo {
+  top: 29%;
+  right: 34%;
+
+  font-size: 22px;
+
+  animation-delay: 0.8s;
+}
+
+
+.particleThree {
+  bottom: 30%;
+  left: 35%;
+
+  font-size: 18px;
+
+  animation-delay: 1.4s;
+}
+
+
+.particleFour {
+  bottom: 24%;
+  right: 33%;
+
+  font-size: 13px;
+
+  animation-delay: 2s;
+}
+
+
+/* =========================================================
+   LOADER CONTAINER
+========================================================= */
+
+.loaderContainer {
+  position: relative;
+
+  width: 255px;
+  height: 255px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   OUTER ROTATING RING
+========================================================= */
+
+.outerRing {
+  position: absolute;
+
+  width: 235px;
+  height: 235px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(124, 58, 237, 0.10);
+
+  border-top-color: #7c3aed;
+  border-right-color: #4f46e5;
+  border-bottom-color: #c026d3;
+
+  box-shadow:
+    0 0 18px rgba(124, 58, 237, 0.15),
+    0 0 45px rgba(192, 38, 211, 0.08);
+
+  animation: rotateRing 2.8s linear infinite;
+}
+
+
+/* Second Ring */
+
+.outerRing::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(124, 58, 237, 0.18);
+
+  animation: rotateReverse 5s linear infinite;
+}
+
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.loaderCard {
+  position: relative;
+
+  width: 175px;
+  height: 175px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(250, 247, 255, 0.70)
+    );
+
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  box-shadow:
+    0 25px 55px rgba(72, 42, 145, 0.14),
+    0 8px 20px rgba(72, 42, 145, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 8px rgba(124, 58, 237, 0.04);
+
+  backdrop-filter: blur(22px);
+
+  transform:
+    perspective(800px)
+    rotateX(2deg);
+
+  overflow: hidden;
+
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   INNER GLOW
+========================================================= */
+
+.innerGlow {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.12),
+      rgba(192, 38, 211, 0.05) 45%,
+      transparent 72%
+    );
+
+  filter: blur(4px);
+
+  animation: innerGlowPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logoWrapper {
+  position: relative;
+
+  z-index: 5;
+
+  width: 115px;
+  height: 115px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(245, 239, 255, 0.82)
+    );
+
+  border: 1px solid rgba(139, 92, 246, 0.14);
+
+  box-shadow:
+    0 12px 30px rgba(91, 33, 182, 0.10),
+    inset 0 2px 5px rgba(255, 255, 255, 0.95);
+}
+
+
+.logo {
+  width: 88px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  animation: logoPulse 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOADING DOTS
+========================================================= */
+
+.loadingDots {
+  position: absolute;
+
+  bottom: 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.loadingDots span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #c026d3
+    );
+
+  box-shadow:
+    0 0 8px rgba(124, 58, 237, 0.25);
+
+  animation: dotBounce 1.4s ease-in-out infinite;
+}
+
+
+.loadingDots span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+
+.loadingDots span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+
+/* =========================================================
+   BRAND NAME
+========================================================= */
+
+.brandName {
+  position: relative;
+
+  z-index: 5;
+
+  margin: 27px 0 5px;
+
+  color: #11172f;
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  letter-spacing: -1.2px;
+}
+
+
+.brandName span {
+  background:
+    linear-gradient(
+      100deg,
+      #7c3aed,
+      #4f46e5,
+      #c026d3
+    );
+
+  background-size: 200% 200%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: brandGradient 4s ease infinite;
+}
+
+
+/* =========================================================
+   LOADING TEXT
+========================================================= */
+
+.loadingText {
+  position: relative;
+
+  z-index: 5;
+
+  margin: 0;
+
+  color: #72798e;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  text-transform: none;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.progressWrapper {
+  position: relative;
+
+  z-index: 5;
+
+  width: 210px;
+
+  height: 5px;
+
+  margin-top: 19px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    rgba(124, 58, 237, 0.10);
+
+  box-shadow:
+    inset 0 1px 3px rgba(72, 42, 145, 0.08);
+}
+
+
+.progressBar {
+  position: relative;
+
+  width: 55%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6d28d9,
+      #7c3aed,
+      #4f46e5,
+      #c026d3
+    );
+
+  background-size: 200% 100%;
+
+  box-shadow:
+    0 0 12px rgba(124, 58, 237, 0.25);
+
+  animation:
+    progressMove 2.2s ease-in-out infinite,
+    gradientMove 2s linear infinite;
+}
+
+
+.progressGlow {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 25px;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  filter: blur(3px);
+
+  animation: progressGlowMove 2.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes cardFloat {
+
+  0%,
+  100% {
+    transform:
+      perspective(800px)
+      translateY(0)
+      rotateX(2deg);
+  }
+
+  50% {
+    transform:
+      perspective(800px)
+      translateY(-7px)
+      rotateX(2deg);
+  }
+}
+
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+@keyframes innerGlowPulse {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.1);
+
+    opacity: 1;
+  }
+}
+
+
+@keyframes dotBounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-4px);
+
+    opacity: 1;
+  }
+}
+
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+
+    opacity: 0.45;
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      scale(1.15);
+
+    opacity: 1;
+  }
+}
+
+
+@keyframes glowFloatOne {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-20px, 20px)
+      scale(1.08);
+  }
+}
+
+
+@keyframes glowFloatTwo {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(25px, -20px)
+      scale(1.1);
+  }
+}
+
+
+@keyframes brandGradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes progressMove {
+
+  0% {
+    width: 15%;
+    transform: translateX(0);
+  }
+
+  50% {
+    width: 70%;
+  }
+
+  100% {
+    width: 15%;
+    transform: translateX(560%);
+  }
+}
+
+
+@keyframes gradientMove {
+
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+
+@keyframes progressGlowMove {
+
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .loaderContainer {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  .outerRing {
+    width: 205px;
+    height: 205px;
+  }
+
+
+  .loaderCard {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 36px;
+  }
+
+
+  .logoWrapper {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 26px;
+  }
+
+
+  .logo {
+    width: 76px;
+  }
+
+
+  .brandName {
+    font-size: 24px;
+  }
+
+
+  .progressWrapper {
+    width: 190px;
+  }
+
+
+  .particleOne {
+    left: 24%;
+  }
+
+
+  .particleTwo {
+    right: 24%;
+  }
+
+
+  .particleThree {
+    left: 25%;
+  }
+
+
+  .particleFour {
+    right: 24%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .loaderContainer {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .outerRing {
+    width: 185px;
+    height: 185px;
+  }
+
+
+  .loaderCard {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 32px;
+  }
+
+
+  .logoWrapper {
+    width: 88px;
+    height: 88px;
+
+    border-radius: 23px;
+  }
+
+
+  .logo {
+    width: 67px;
+  }
+
+
+  .loadingDots {
+    bottom: 13px;
+  }
+
+
+  .brandName {
+    margin-top: 23px;
+
+    font-size: 22px;
+  }
+
+
+  .loadingText {
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .progressWrapper {
+    width: 170px;
+
+    margin-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .glowOne,
+  .glowTwo,
+  .particle,
+  .outerRing,
+  .outerRing::before,
+  .loaderCard,
+  .innerGlow,
+  .logo,
+  .loadingDots span,
+  .brandName span,
+  .progressBar,
+  .progressGlow {
+    animation: none !important;
+  }
+}

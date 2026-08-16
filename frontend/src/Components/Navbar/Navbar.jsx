@@ -23,7 +23,6 @@ const Navbar = () => {
 
   const toggleTheme = () => {
     setDarkMode((prev) => !prev);
-
     document.body.classList.toggle("dark-theme");
   };
 
@@ -32,7 +31,11 @@ const Navbar = () => {
       <div className={styles.container}>
 
         {/* Logo */}
-        <Link to="/" className={styles.logo} onClick={closeMenu}>
+        <Link
+          to="/"
+          className={styles.logo}
+          onClick={closeMenu}
+        >
           <img
             src={JobBridgeLogo}
             alt="JobBridge"
@@ -46,6 +49,8 @@ const Navbar = () => {
             isMenuOpen ? styles.mobileMenuOpen : ""
           }`}
         >
+
+          {/* Home */}
           <Link
             to="/"
             className={styles.navLink}
@@ -54,6 +59,7 @@ const Navbar = () => {
             Home
           </Link>
 
+          {/* Jobs */}
           <Link
             to="/jobs"
             className={styles.navLink}
@@ -62,6 +68,7 @@ const Navbar = () => {
             Jobs
           </Link>
 
+          {/* Internships */}
           <Link
             to="/internships"
             className={styles.navLink}
@@ -70,6 +77,7 @@ const Navbar = () => {
             Internships
           </Link>
 
+          {/* Companies */}
           <Link
             to="/companies"
             className={styles.navLink}
@@ -98,6 +106,7 @@ const Navbar = () => {
 
             {isResourceOpen && (
               <div className={styles.dropdownMenu}>
+
                 <Link
                   to="/career-resources"
                   onClick={closeMenu}
@@ -125,10 +134,12 @@ const Navbar = () => {
                 >
                   Career Tips
                 </Link>
+
               </div>
             )}
           </div>
 
+          {/* About */}
           <Link
             to="/about"
             className={styles.navLink}
@@ -137,8 +148,18 @@ const Navbar = () => {
             About Us
           </Link>
 
+          {/* Contact */}
+          <Link
+            to="/contact"
+            className={styles.navLink}
+            onClick={closeMenu}
+          >
+            Contact
+          </Link>
+
           {/* Mobile Auth Buttons */}
           <div className={styles.mobileAuthButtons}>
+
             <Link
               to="/login"
               className={styles.mobileLogin}
@@ -154,7 +175,9 @@ const Navbar = () => {
             >
               Sign Up
             </Link>
+
           </div>
+
         </nav>
 
         {/* Right Side */}
@@ -172,9 +195,11 @@ const Navbar = () => {
 
           {/* Desktop Auth */}
           <div className={styles.authButtons}>
+
             <Link
               to="/login"
               className={styles.loginButton}
+              onClick={closeMenu}
             >
               Login
             </Link>
@@ -182,9 +207,11 @@ const Navbar = () => {
             <Link
               to="/signup"
               className={styles.signupButton}
+              onClick={closeMenu}
             >
               Sign Up
             </Link>
+
           </div>
 
           {/* Mobile Menu Button */}
