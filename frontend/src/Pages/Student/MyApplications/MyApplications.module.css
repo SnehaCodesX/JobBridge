@@ -1,0 +1,557 @@
+.page {
+  min-height: 100vh;
+  padding: 22px;
+  background: #f7f6fc;
+  color: #17163d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 165px;
+  border-radius: 16px;
+  padding: 28px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(
+    110deg,
+    #29116f,
+    #4b20c9,
+    #7435ed
+  );
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(73, 35, 180, 0.18);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: 40px;
+  top: -260px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.03),
+    0 0 0 70px rgba(255, 255, 255, 0.025);
+}
+
+.heroSmall {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  margin: 12px 0 8px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.heroIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+}
+
+/* ================= STATS ================= */
+
+.statsGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.statCard {
+  min-height: 105px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #ebe7f7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 18px rgba(67, 41, 150, 0.06);
+}
+
+.statIcon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.purple {
+  background: #f0e8ff;
+  color: #6731d9;
+}
+
+.blue {
+  background: #e9f1ff;
+  color: #2874df;
+}
+
+.green {
+  background: #e5f8ee;
+  color: #20a465;
+}
+
+.orange {
+  background: #fff2dd;
+  color: #e78b0b;
+}
+
+.red {
+  background: #ffe9ec;
+  color: #d51f36;
+}
+
+.statCard span {
+  display: block;
+  font-size: 13px;
+  color: #686681;
+  margin-bottom: 4px;
+}
+
+.statCard strong {
+  display: block;
+  font-size: 26px;
+  color: #29245c;
+}
+
+.statCard small {
+  display: block;
+  color: #77738e;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ================= FILTER ================= */
+
+.filterBar {
+  margin-top: 24px;
+  padding: 14px;
+  background: white;
+  border: 1px solid #ebe7f7;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr auto;
+  gap: 14px;
+  box-shadow: 0 5px 18px rgba(67, 41, 150, 0.05);
+}
+
+.searchBox {
+  height: 48px;
+  border: 1px solid #ded9ee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+}
+
+.searchBox span {
+  font-size: 18px;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #29245c;
+}
+
+.filterBar select {
+  height: 48px;
+  border: 1px solid #ded9ee;
+  border-radius: 8px;
+  background: white;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #29245c;
+  outline: none;
+}
+
+.filterButton {
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 9px;
+  border: 1px solid #6932d9;
+  background: white;
+  color: #6932d9;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= APPLICATION TABLE ================= */
+
+.applicationSection {
+  margin-top: 18px;
+  background: white;
+  border: 1px solid #ebe7f7;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(67, 41, 150, 0.05);
+}
+
+.tableHeader {
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: 2.5fr 0.9fr 0.9fr 1.1fr 0.8fr;
+  align-items: center;
+  padding: 0 18px;
+  background: #faf8ff;
+  color: #6430c7;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.applicationRow {
+  min-height: 125px;
+  display: grid;
+  grid-template-columns: 2.5fr 0.9fr 0.9fr 1.1fr 0.8fr;
+  align-items: center;
+  padding: 18px;
+  border-top: 1px solid #eeeaf7;
+  gap: 15px;
+}
+
+.applicationRow:hover {
+  background: #fcfbff;
+}
+
+/* ================= JOB DETAILS ================= */
+
+.jobDetails {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.companyLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    135deg,
+    #5e2be5,
+    #7838ed
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.jobDetails h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #19163e;
+}
+
+.company {
+  margin: 0 0 7px;
+  font-size: 13px;
+  color: #66627c;
+}
+
+.jobMeta {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  color: #6b6880;
+  font-size: 12px;
+}
+
+/* ================= DATE ================= */
+
+.appliedDate strong {
+  display: block;
+  font-size: 13px;
+  color: #272342;
+}
+
+.appliedDate span {
+  display: block;
+  margin-top: 7px;
+  color: #858197;
+  font-size: 12px;
+}
+
+/* ================= STATUS ================= */
+
+.statusColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.status {
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusColumn small {
+  color: #77738b;
+  font-size: 11px;
+}
+
+.applied {
+  background: #e9f1ff;
+  color: #1764c0;
+}
+
+.shortlisted {
+  background: #e3f7eb;
+  color: #218b57;
+}
+
+.interview {
+  background: #fff1dc;
+  color: #d68108;
+}
+
+.rejected {
+  background: #ffe6ea;
+  color: #d32643;
+}
+
+/* ================= NEXT STEP ================= */
+
+.nextStep strong {
+  display: block;
+  font-size: 13px;
+  color: #302b52;
+}
+
+.nextStep span {
+  display: block;
+  margin-top: 7px;
+  color: #77738b;
+  font-size: 11px;
+}
+
+/* ================= ACTION ================= */
+
+.action button {
+  width: 100%;
+  min-width: 120px;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #c9b7ec;
+  background: white;
+  color: #6330c7;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.action button:hover {
+  background: #6330c7;
+  color: white;
+}
+
+/* ================= NO RESULTS ================= */
+
+.noResults {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.noResults > div {
+  font-size: 40px;
+}
+
+.noResults h3 {
+  margin: 12px 0 5px;
+}
+
+.noResults p {
+  color: #77738b;
+}
+
+.noResults button {
+  border: none;
+  background: #6330c7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* ================= TIP ================= */
+
+.tipCard {
+  margin-top: 18px;
+  padding: 17px 22px;
+  background: #faf8ff;
+  border: 1px solid #ddd3f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tipIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #eee5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.tipContent {
+  flex: 1;
+}
+
+.tipContent h3 {
+  margin: 0 0 5px;
+  color: #4d299b;
+  font-size: 14px;
+}
+
+.tipContent p {
+  margin: 0;
+  color: #69657c;
+  font-size: 12px;
+}
+
+.tipCard button {
+  border: none;
+  background: linear-gradient(
+    90deg,
+    #5d28d4,
+    #7433e8
+  );
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filterBar {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .filterButton {
+    grid-column: span 1;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .applicationRow {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .action {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 12px;
+  }
+
+  .hero {
+    padding: 25px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .heroIcon {
+    display: none;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filterBar {
+    grid-template-columns: 1fr;
+  }
+
+  .applicationRow {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .action {
+    grid-column: auto;
+  }
+
+  .action button {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .tipCard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 140px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .jobMeta {
+    flex-direction: column;
+  }
+}

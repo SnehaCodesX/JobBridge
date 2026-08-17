@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-
 import AppRoutes from "./routes/AppRoutes";
 
 import Footer from "./Components/Footer/Footer";
@@ -18,153 +17,131 @@ function App() {
 
   return (
     <AppProvider>
-      
-        <AppRoutes />
+      <AppRoutes />
 
-        <Footer />
+      <Footer />
 
-        <Loader />
-        <Companies></Companies>
+      <Loader />
+      <Companies />
 
-        {/* =========================================
-            BUTTON COMPONENT TEST AREA
-        ========================================= */}
-        <section
+      {/* =========================================
+          BUTTON COMPONENT TEST AREA
+      ========================================= */}
+      <section
+        style={{
+          padding: "60px 30px",
+          margin: "40px auto",
+          maxWidth: "1100px",
+          textAlign: "center",
+        }}
+      >
+        <h2
           style={{
-            padding: "60px 30px",
-            margin: "40px auto",
-            maxWidth: "1100px",
-            textAlign: "center",
+            marginBottom: "10px",
+            color: "#4c1d95",
           }}
         >
-          <h2
-            style={{
-              marginBottom: "10px",
-              color: "#4c1d95",
-            }}
-          >
-            JobBridge Button Components
-          </h2>
+          JobBridge Button Components
+        </h2>
 
-          <p
-            style={{
-              marginBottom: "30px",
-              color: "#64748b",
-            }}
-          >
-            Reusable Button Component Preview
+        <p
+          style={{
+            marginBottom: "30px",
+            color: "#64748b",
+          }}
+        >
+          Reusable Button Component Preview
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "15px",
+            flexWrap: "wrap",
+            marginBottom: "30px",
+          }}
+        >
+          <Button variant="primary">Primary</Button>
+
+          <Button variant="secondary">Secondary</Button>
+
+          <Button variant="outline">Outline</Button>
+
+          <Button variant="danger">Delete</Button>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "15px",
+            flexWrap: "wrap",
+          }}
+        >
+          <Button variant="primary" size="small">
+            Small
+          </Button>
+
+          <Button variant="primary" size="medium">
+            Medium
+          </Button>
+
+          <Button variant="primary" size="large">
+            Large
+          </Button>
+        </div>
+      </section>
+
+      {/* =========================================
+          MODAL TEST BUTTON
+      ========================================= */}
+      <button
+        type="button"
+        onClick={() => setIsModalOpen(true)}
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          right: "30px",
+          zIndex: 5000,
+          padding: "12px 22px",
+          border: "none",
+          borderRadius: "14px",
+          background:
+            "linear-gradient(135deg, #7c3aed, #4f46e5, #c026d3)",
+          color: "#fff",
+          fontWeight: "700",
+          cursor: "pointer",
+          boxShadow: "0 10px 25px rgba(124, 58, 237, 0.3)",
+        }}
+      >
+        Open Modal
+      </button>
+
+      {/* =========================================
+          MODAL
+      ========================================= */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Welcome to JobBridge"
+      >
+        <div>
+          <p>
+            Welcome to JobBridge! Find the right opportunities and build
+            your career with us.
           </p>
 
-          {/* Variants */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "15px",
-              flexWrap: "wrap",
-              marginBottom: "30px",
-            }}
+          <Button
+            variant="primary"
+            onClick={() => setIsModalOpen(false)}
           >
-            <Button variant="primary">
-              Primary
-            </Button>
-
-            <Button variant="secondary">
-              Secondary
-            </Button>
-
-            <Button variant="outline">
-              Outline
-            </Button>
-
-            <Button variant="danger">
-              Delete
-            </Button>
-          </div>
-
-          {/* Sizes */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "15px",
-              flexWrap: "wrap",
-            }}
-          >
-            <Button
-              variant="primary"
-              size="small"
-            >
-              Small
-            </Button>
-
-            <Button
-              variant="primary"
-              size="medium"
-            >
-              Medium
-            </Button>
-
-            <Button
-              variant="primary"
-              size="large"
-            >
-              Large
-            </Button>
-          </div>
-        </section>
-
-        {/* =========================================
-            MODAL TEST BUTTON
-        ========================================= */}
-        <button
-          type="button"
-          onClick={() => setIsModalOpen(true)}
-          style={{
-            position: "fixed",
-            bottom: "30px",
-            right: "30px",
-            zIndex: 5000,
-            padding: "12px 22px",
-            border: "none",
-            borderRadius: "14px",
-            background:
-              "linear-gradient(135deg, #7c3aed, #4f46e5, #c026d3)",
-            color: "#fff",
-            fontWeight: "700",
-            cursor: "pointer",
-            boxShadow:
-              "0 10px 25px rgba(124, 58, 237, 0.3)",
-          }}
-        >
-          Open Modal
-        </button>
-
-        {/* =========================================
-            MODAL
-        ========================================= */}
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          title="Welcome to JobBridge"
-        >
-          <div>
-            <p>
-              Welcome to JobBridge! Find the right
-              opportunities and build your career with us.
-            </p>
-
-            <Button
-              variant="primary"
-              onClick={() => setIsModalOpen(false)}
-            >
-              Continue
-            </Button>
-          </div>
-        </Modal>
-      
+            Continue
+          </Button>
+        </div>
+      </Modal>
     </AppProvider>
   );
 }
