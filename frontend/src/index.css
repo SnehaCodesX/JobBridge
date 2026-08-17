@@ -1,0 +1,90 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons and inputs */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make buttons easy to use on mobile */
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE CONTAINER
+========================= */
+
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .container-custom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .container-custom {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+:root {
+  --primary-purple: #6125ed;
+  --primary-purple-dark: #4f1dcc;
+  --light-purple: #ede9fe;
+  --very-light-purple: #f8f7ff;
+  --text-dark: #1e1b4b;
+  --text-gray: #64748b;
+}
