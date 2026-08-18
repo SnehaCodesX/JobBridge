@@ -1,0 +1,738 @@
+/* ========================================
+   JOBBRIDGE - RESUME PAGE
+   PURPLE 3D THEME
+======================================== */
+
+.resumePage {
+  min-height: 100vh;
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(168, 85, 247, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.15),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #faf7ff,
+      #f5efff
+    );
+
+  color: #24113f;
+  perspective: 1200px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 32px;
+  margin-bottom: 28px;
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4c1d95,
+      #7c3aed,
+      #9333ea,
+      #a855f7
+    );
+
+  color: white;
+
+  box-shadow:
+    0 20px 45px rgba(124, 58, 237, 0.30),
+    0 8px 0 #3b0764;
+
+  transition: 0.4s ease;
+
+  transform-style: preserve-3d;
+
+  overflow: hidden;
+}
+
+.pageHeader:hover {
+  transform:
+    translateY(-7px)
+    rotateX(2deg)
+    rotateY(-1deg);
+
+  box-shadow:
+    0 30px 55px rgba(124, 58, 237, 0.35),
+    0 10px 0 #3b0764;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.pageHeader h1 {
+  margin: 10px 0 5px;
+
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.pageHeader p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.headerIcon {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 38px;
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+
+  animation: floating 3s ease-in-out infinite;
+
+  transform: translateZ(30px);
+}
+
+/* ========================================
+   MAIN GRID
+======================================== */
+
+.resumeGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 28px;
+}
+
+/* ========================================
+   COMMON CARDS
+======================================== */
+
+.uploadCard,
+.previewCard {
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(250, 245, 255, 0.96)
+    );
+
+  border: 1px solid #eadcff;
+
+  box-shadow:
+    0 18px 35px rgba(91, 33, 182, 0.10),
+    0 6px 0 #eadcff;
+
+  transition: 0.4s ease;
+
+  transform-style: preserve-3d;
+}
+
+.uploadCard:hover,
+.previewCard:hover {
+  transform:
+    translateY(-10px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  border-color: #c084fc;
+
+  box-shadow:
+    0 30px 50px rgba(124, 58, 237, 0.18),
+    0 8px 0 #d8b4fe;
+}
+
+/* ========================================
+   CARD HEADER
+======================================== */
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.smallTitle {
+  color: #7c3aed;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.cardTop h2 {
+  margin: 5px 0 0;
+
+  color: #2e1065;
+
+  font-size: 21px;
+}
+
+.uploadIcon,
+.previewIcon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3e8ff,
+      #e9d5ff
+    );
+
+  font-size: 23px;
+
+  box-shadow:
+    0 6px 0 #d8b4fe;
+
+  transition: 0.3s ease;
+}
+
+.uploadCard:hover .uploadIcon,
+.previewCard:hover .previewIcon {
+  transform:
+    translateY(-6px)
+    rotate(8deg)
+    scale(1.08);
+
+  box-shadow:
+    0 10px 0 #c084fc;
+}
+
+/* ========================================
+   UPLOAD AREA
+======================================== */
+
+.uploadBox {
+  min-height: 285px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 2px dashed #c084fc;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf5ff,
+      #f3e8ff
+    );
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.uploadBox:hover {
+  border-color: #7c3aed;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3e8ff,
+      #ede9fe
+    );
+
+  transform:
+    translateY(-5px)
+    scale(1.01);
+
+  box-shadow:
+    0 18px 30px rgba(124, 58, 237, 0.14);
+}
+
+.uploadCloud {
+  font-size: 50px;
+
+  margin-bottom: 10px;
+
+  animation:
+    cloudFloat 2.5s ease-in-out infinite;
+}
+
+.uploadBox h3 {
+  margin: 5px 0;
+
+  color: #3b0764;
+
+  font-size: 18px;
+}
+
+.uploadBox p {
+  color: #7e6a95;
+
+  font-size: 12px;
+}
+
+/* ========================================
+   CHOOSE FILE BUTTON
+======================================== */
+
+.chooseButton {
+  display: inline-block;
+
+  margin-top: 14px;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #9333ea,
+      #a855f7
+    );
+
+  font-weight: 700;
+
+  box-shadow:
+    0 6px 0 #4c1d95,
+    0 10px 20px rgba(124, 58, 237, 0.22);
+
+  transition: 0.2s ease;
+}
+
+.uploadBox:hover .chooseButton {
+  transform:
+    translateY(-5px)
+    scale(1.06);
+
+  box-shadow:
+    0 9px 0 #4c1d95,
+    0 15px 25px rgba(124, 58, 237, 0.28);
+}
+
+/* ========================================
+   SELECTED FILE
+======================================== */
+
+.selectedFile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 16px;
+
+  padding: 13px 16px;
+
+  border-radius: 13px;
+
+  background: #f3e8ff;
+
+  border: 1px solid #d8b4fe;
+
+  color: #581c87;
+
+  font-size: 13px;
+
+  box-shadow:
+    0 6px 15px rgba(124, 58, 237, 0.08);
+}
+
+.selectedFile strong {
+  flex: 1;
+}
+
+.check {
+  color: #7c3aed;
+
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/* ========================================
+   RESUME PAPER
+======================================== */
+
+.resumePaper {
+  min-height: 285px;
+
+  padding: 26px;
+
+  border-radius: 12px;
+
+  background: white;
+
+  border: 1px solid #e9d5ff;
+
+  box-shadow:
+    0 12px 30px rgba(91, 33, 182, 0.10);
+
+  transition: 0.4s ease;
+}
+
+.previewCard:hover .resumePaper {
+  transform:
+    translateZ(20px)
+    rotateX(1deg);
+
+  box-shadow:
+    0 20px 40px rgba(124, 58, 237, 0.14);
+}
+
+/* ========================================
+   RESUME HEADER
+======================================== */
+
+.resumeTop {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.resumeAvatar {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #a855f7
+    );
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 0 #4c1d95,
+    0 10px 20px rgba(124, 58, 237, 0.2);
+}
+
+.resumeTop h3 {
+  margin: 0;
+
+  color: #2e1065;
+
+  font-size: 18px;
+}
+
+.resumeTop p {
+  margin: 3px 0 0;
+
+  color: #8b7a9e;
+
+  font-size: 12px;
+}
+
+.resumeLine {
+  height: 2px;
+
+  margin: 18px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7c3aed,
+      #e9d5ff,
+      transparent
+    );
+}
+
+/* ========================================
+   PREVIEW SECTIONS
+======================================== */
+
+.previewSection {
+  margin-bottom: 18px;
+}
+
+.previewSection h4 {
+  margin: 0 0 6px;
+
+  color: #7c3aed;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.previewSection p {
+  margin: 0;
+
+  color: #5b4a6b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.previewSection > span {
+  color: #a78bba;
+
+  font-size: 10px;
+}
+
+/* ========================================
+   RESUME SKILLS
+======================================== */
+
+.previewSkills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.previewSkills span {
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3e8ff,
+      #ede9fe
+    );
+
+  border: 1px solid #ddd6fe;
+
+  color: #6d28d9;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.previewSkills span:hover {
+  transform:
+    translateY(-3px)
+    scale(1.06);
+
+  background: #7c3aed;
+
+  color: white;
+
+  box-shadow:
+    0 5px 12px rgba(124, 58, 237, 0.2);
+}
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 28px;
+}
+
+.actionBtn {
+  padding: 14px 22px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.downloadBtn {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #9333ea,
+      #a855f7
+    );
+
+  box-shadow:
+    0 7px 0 #4c1d95,
+    0 14px 25px rgba(124, 58, 237, 0.22);
+}
+
+.updateBtn {
+  color: #6d28d9;
+
+  background: white;
+
+  border: 1px solid #d8b4fe;
+
+  box-shadow:
+    0 7px 0 #ddd6fe;
+}
+
+.actionBtn:hover {
+  transform:
+    translateY(-6px)
+    scale(1.04);
+}
+
+.downloadBtn:hover {
+  box-shadow:
+    0 10px 0 #4c1d95,
+    0 18px 30px rgba(124, 58, 237, 0.30);
+}
+
+.updateBtn:hover {
+  background: #faf5ff;
+
+  box-shadow:
+    0 10px 0 #ddd6fe;
+}
+
+.actionBtn:active {
+  transform:
+    translateY(3px)
+    scale(0.97);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes floating {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-10px)
+      rotate(5deg);
+  }
+}
+
+@keyframes cloudFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+  .resumePage {
+    padding: 25px 15px;
+  }
+
+  .resumeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageHeader {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 550px) {
+  .pageHeader h1 {
+    font-size: 26px;
+  }
+
+  .headerIcon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actionBtn {
+    width: 100%;
+  }
+}
