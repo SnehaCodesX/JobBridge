@@ -22,11 +22,10 @@ function App() {
       <Footer />
 
       <Loader />
+
       <Companies />
 
-      {/* =========================================
-          BUTTON COMPONENT TEST AREA
-      ========================================= */}
+      {/* BUTTON COMPONENT TEST AREA */}
       <section
         style={{
           padding: "60px 30px",
@@ -64,11 +63,8 @@ function App() {
           }}
         >
           <Button variant="primary">Primary</Button>
-
           <Button variant="secondary">Secondary</Button>
-
           <Button variant="outline">Outline</Button>
-
           <Button variant="danger">Delete</Button>
         </div>
 
@@ -95,9 +91,7 @@ function App() {
         </div>
       </section>
 
-      {/* =========================================
-          MODAL TEST BUTTON
-      ========================================= */}
+      {/* MODAL TEST BUTTON */}
       <button
         type="button"
         onClick={() => setIsModalOpen(true)}
@@ -120,9 +114,7 @@ function App() {
         Open Modal
       </button>
 
-      {/* =========================================
-          MODAL
-      ========================================= */}
+      {/* MODAL */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -130,8 +122,8 @@ function App() {
       >
         <div>
           <p>
-            Welcome to JobBridge! Find the right opportunities and build
-            your career with us.
+            Welcome to JobBridge! Find the right opportunities and build your
+            career with us.
           </p>
 
           <Button

@@ -1,0 +1,903 @@
+.studentRegisterPage {
+  min-height: 100vh;
+
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #151936;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.registerLayout {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 56% 44%;
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.leftPanel {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 42px 60px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* Big decorative circle */
+
+.bigCircle {
+  position: absolute;
+
+  left: -75px;
+
+  top: 85px;
+
+  width: 150px;
+
+  height: 150px;
+
+  background: #eee7ff;
+
+  border-radius: 50%;
+}
+
+
+/* Small decorative circle */
+
+.smallCircle {
+  position: absolute;
+
+  right: 65px;
+
+  top: 90px;
+
+  width: 14px;
+
+  height: 14px;
+
+  background: #cdb8ff;
+
+  border-radius: 50%;
+}
+
+
+/* Left content */
+
+.leftContent {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 620px;
+}
+
+
+/* =====================================================
+   TOP LABEL
+===================================================== */
+
+.topLabel {
+  margin-top: 8px;
+
+  color: #6333ed;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.leftContent h1 {
+  margin: 10px 0 16px;
+
+  color: #111632;
+
+  font-size: 42px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+}
+
+
+.leftContent h1 span {
+  color: #6333ed;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+  max-width: 570px;
+
+  margin: 0 0 17px;
+
+  color: #69718a;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   STUDENT ILLUSTRATION
+===================================================== */
+
+.studentIllustration {
+  position: relative;
+
+  width: 430px;
+
+  height: 115px;
+
+  margin: 8px 0 20px;
+}
+
+
+/* Laptop */
+
+.laptop {
+  position: absolute;
+
+  left: 20px;
+
+  top: 4px;
+
+  width: 250px;
+}
+
+
+/* Laptop screen */
+
+.laptopTop {
+  width: 235px;
+
+  height: 78px;
+
+  padding: 12px;
+
+  border: 5px solid #6333ed;
+
+  border-radius: 7px 7px 2px 2px;
+
+  background: #faf8ff;
+
+  box-shadow:
+    0 8px 20px rgba(99, 51, 237, 0.12);
+}
+
+
+/* Screen lines */
+
+.laptopLine {
+  width: 75px;
+
+  height: 5px;
+
+  margin-bottom: 7px;
+
+  background: #d9d0f1;
+
+  border-radius: 5px;
+}
+
+
+.laptopLine:first-child {
+  width: 100px;
+
+  background: #6333ed;
+}
+
+
+/* Profile button */
+
+.laptopButton {
+  width: 70px;
+
+  padding: 5px;
+
+  margin-top: 4px;
+
+  color: #6333ed;
+
+  background: #eee7ff;
+
+  border-radius: 4px;
+
+  font-size: 6px;
+
+  text-align: center;
+}
+
+
+/* Laptop base */
+
+.laptopBase {
+  width: 270px;
+
+  height: 10px;
+
+  margin-left: -17px;
+
+  background: #25283d;
+
+  border-radius: 0 0 15px 15px;
+}
+
+
+/* Match card */
+
+.matchCard {
+  position: absolute;
+
+  right: 15px;
+
+  top: 25px;
+
+  width: 125px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 25px rgba(60, 40, 120, 0.14);
+}
+
+
+.matchCard strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #6333ed;
+
+  font-size: 11px;
+}
+
+
+.matchCard small {
+  color: #81879a;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.featureList {
+  margin-top: 5px;
+}
+
+
+.featureItem {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 13px;
+}
+
+
+/* Feature icon */
+
+.featureIcon {
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6333ed;
+
+  background: #eee7ff;
+
+  border-radius: 8px;
+
+  font-size: 17px;
+}
+
+
+/* Feature heading */
+
+.featureItem h3 {
+  margin: 0 0 3px;
+
+  color: #252a42;
+
+  font-size: 13px;
+}
+
+
+/* Feature paragraph */
+
+.featureItem p {
+  margin: 0;
+
+  color: #747b91;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.rightPanel {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 55px 45px 35px;
+
+  background: #f7f3ff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   REGISTER ICON
+===================================================== */
+
+.registerIcon {
+  position: relative;
+
+  z-index: 4;
+
+  width: 60px;
+
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: -42px auto 7px;
+
+  color: #ffffff;
+
+  background: #6333ed;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 7px 18px rgba(99, 51, 237, 0.25);
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.formContainer {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.formContainer h2 {
+  margin: 0;
+
+  color: #191d3b;
+
+  text-align: center;
+
+  font-size: 25px;
+}
+
+
+/* Subtitle */
+
+.formSubtitle {
+  margin: 6px 0 18px;
+
+  color: #8a8fa1;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.registerForm {
+  width: 100%;
+}
+
+
+/* Form group */
+
+.formGroup {
+  margin-bottom: 10px;
+}
+
+
+/* Label */
+
+.formGroup > label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #252a43;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* Input */
+
+.inputWrapper {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 9px;
+
+  background: #ffffff;
+
+  border: 1px solid #ded9e9;
+
+  border-radius: 6px;
+}
+
+
+.inputWrapper:focus-within {
+  border-color: #6333ed;
+
+  box-shadow:
+    0 0 0 2px rgba(99, 51, 237, 0.08);
+}
+
+
+.inputIcon {
+  width: 22px;
+
+  color: #9b8ac9;
+
+  font-size: 11px;
+}
+
+
+.inputWrapper input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  color: #252942;
+
+  background: transparent;
+
+  font-size: 9px;
+}
+
+
+.inputWrapper input::placeholder {
+  color: #a5a8b5;
+}
+
+
+/* Eye button */
+
+.eyeButton {
+  border: none;
+
+  color: #979baa;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skillsWrapper {
+  width: 100%;
+}
+
+
+.skillsInputRow {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 9px;
+
+  background: #ffffff;
+
+  border: 1px solid #ded9e9;
+
+  border-radius: 6px;
+}
+
+
+.skillsInputRow input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 9px;
+}
+
+
+.skillsInputRow input::placeholder {
+  color: #a5a8b5;
+}
+
+
+.addSkillButton {
+  width: 22px;
+
+  height: 22px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  color: #ffffff;
+
+  background: #6333ed;
+
+  cursor: pointer;
+}
+
+
+/* Skill tags */
+
+.skillTags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 5px;
+}
+
+
+.skillTag {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 4px 7px;
+
+  color: #6333ed;
+
+  background: #eee7ff;
+
+  border-radius: 4px;
+
+  font-size: 8px;
+}
+
+
+.skillTag button {
+  padding: 0;
+
+  border: none;
+
+  color: #6333ed;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.termsRow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 8px 0;
+
+  color: #8a8e9d;
+
+  font-size: 8px;
+}
+
+
+.termsRow input {
+  width: 12px;
+
+  height: 12px;
+
+  accent-color: #6333ed;
+}
+
+
+.termsRow a {
+  color: #6333ed;
+
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.registerButton {
+  width: 100%;
+
+  height: 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  background: #6333ed;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 14px rgba(99, 51, 237, 0.2);
+}
+
+
+.registerButton:hover {
+  background: #5528d7;
+}
+
+
+.registerButton span {
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   LOGIN DIVIDER
+===================================================== */
+
+.loginDivider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 8px 0 7px;
+}
+
+
+.loginDivider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #ded9e9;
+}
+
+
+.loginDivider p {
+  margin: 0;
+
+  color: #9699a8;
+
+  font-size: 7px;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.loginPortalButton {
+  width: 100%;
+
+  height: 29px;
+
+  border: 1.5px solid #6333ed;
+
+  border-radius: 6px;
+
+  color: #6333ed;
+
+  background: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.loginPortalButton:hover {
+  color: #ffffff;
+
+  background: #6333ed;
+}
+
+
+/* =====================================================
+   PURPLE DECORATION
+===================================================== */
+
+.purpleShape {
+  position: absolute;
+
+  right: -120px;
+
+  bottom: -120px;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: #cbb0ff;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+.purpleShape::before {
+  content: "";
+
+  position: absolute;
+
+  right: 75px;
+
+  top: -35px;
+
+  width: 190px;
+
+  height: 190px;
+
+  background: #d7c2ff;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .registerLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .leftPanel {
+    min-height: auto;
+
+    padding: 40px 35px;
+  }
+
+  .rightPanel {
+    min-height: 700px;
+
+    padding: 55px 35px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .leftPanel {
+    padding: 30px 20px;
+  }
+
+  .leftContent h1 {
+    font-size: 34px;
+  }
+
+  .studentIllustration {
+    transform: scale(0.85);
+
+    transform-origin: left center;
+  }
+
+  .rightPanel {
+    padding: 55px 20px;
+  }
+
+}

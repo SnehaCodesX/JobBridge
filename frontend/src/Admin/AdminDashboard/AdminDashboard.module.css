@@ -1,1 +1,295 @@
-/* Home Page Styles */
+.dashboard {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8f7fc;
+  font-family: Arial, sans-serif;
+  color: #17152a;
+}
+
+.header,
+.profileBox,
+.panelHeader,
+.applicationItem,
+.jobItem,
+.tableRow,
+.userDetail {
+  display: flex;
+  align-items: center;
+}
+
+.header,
+.panelHeader {
+  justify-content: space-between;
+}
+
+.welcome {
+  color: #6125ed;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subText,
+.panelHeader p,
+.statCard p,
+.applicationInfo p,
+.jobItem p,
+.userDetail p {
+  margin: 6px 0 0;
+  color: #827d91;
+  font-size: 13px;
+}
+
+.profileBox {
+  gap: 10px;
+}
+
+.notification {
+  border: 0;
+  background: #eee8ff;
+  padding: 11px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.adminAvatar,
+.userAvatar {
+  display: grid;
+  place-items: center;
+  color: #6125ed;
+  font-weight: 700;
+  background: #e9deff;
+  border-radius: 50%;
+}
+
+.adminAvatar {
+  height: 42px;
+  width: 42px;
+}
+
+.userAvatar {
+  min-width: 38px;
+  height: 38px;
+}
+
+.profileBox h4,
+.applicationInfo h4,
+.jobItem h4,
+.userDetail h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.profileBox span {
+  font-size: 12px;
+  color: #827d91;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ece9f3;
+  border-radius: 16px;
+}
+
+.statIcon,
+.jobIcon {
+  display: grid;
+  place-items: center;
+  background: #f0eaff;
+  border-radius: 12px;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  font-size: 23px;
+}
+
+.statCard h2 {
+  margin: 7px 0;
+  font-size: 23px;
+}
+
+.growth {
+  color: #169b67;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.middleSection {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  padding: 22px;
+  border: 1px solid #ece9f3;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(97, 37, 237, 0.04);
+}
+
+.panelHeader h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.panelHeader button {
+  border: 0;
+  color: #6125ed;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.applicationList,
+.jobList {
+  margin-top: 17px;
+}
+
+.applicationItem,
+.jobItem {
+  gap: 11px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f0edf5;
+}
+
+.applicationInfo {
+  flex: 1;
+}
+
+.status {
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pending {
+  color: #a56b00;
+  background: #fff1d6;
+}
+
+.shortlisted,
+.active {
+  color: #16865a;
+  background: #dff8eb;
+}
+
+.rejected,
+.inactive {
+  color: #d43951;
+  background: #ffe1e6;
+}
+
+.jobIcon {
+  min-width: 40px;
+  height: 40px;
+}
+
+.jobItem > div:nth-child(2) {
+  flex: 1;
+}
+
+.jobItem > span {
+  color: #6125ed;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recentUsersPanel {
+  margin-top: 20px;
+}
+
+.usersTable {
+  margin-top: 15px;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.tableHead {
+  padding: 12px 10px;
+  color: #827d91;
+  background: #faf9fd;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tableRow {
+  padding: 13px 10px;
+  border-bottom: 1px solid #f0edf5;
+}
+
+.userDetail {
+  gap: 10px;
+}
+
+.role {
+  width: fit-content;
+  padding: 6px 10px;
+  color: #6125ed;
+  border-radius: 7px;
+  font-size: 11px;
+  background: #f0eaff;
+}
+
+@media (max-width: 1000px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middleSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 18px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .profileBox > div:last-child {
+    display: none;
+  }
+
+  .tableHead,
+  .tableRow {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .tableHead span:last-child,
+  .tableRow > span:last-child {
+    display: none;
+  }
+}

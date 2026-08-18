@@ -1,0 +1,152 @@
+/* =========================
+   COMPANY NOTIFICATIONS
+========================= */
+
+.company-notification {
+    margin-left: 240px;
+    min-height: 100vh;
+    padding: 35px;
+    background: linear-gradient(135deg, #f8f7ff, #f0e9ff);
+}
+
+/* Header */
+
+.notification-header {
+    margin-bottom: 30px;
+}
+
+.notification-header h1 {
+    margin: 0;
+    color: #1e1b4b;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.notification-header p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+/* Container */
+
+.notification-container {
+    max-width: 1050px;
+}
+
+/* Notification Card */
+
+.notification-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 21px;
+    margin-bottom: 16px;
+    background: white;
+    border: 1px solid #eee9ff;
+    border-radius: 16px;
+    box-shadow: 0 7px 20px rgba(97, 37, 237, 0.07);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+/* Purple side line */
+
+.notification-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #6125ed, #8b5cf6);
+}
+
+/* Hover */
+
+.notification-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 11px 27px rgba(97, 37, 237, 0.14);
+    border-color: #ddd6fe;
+}
+
+/* Icon */
+
+.notification-icon {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ede9fe, #f3efff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    box-shadow: inset 0 0 0 1px #ddd6fe;
+}
+
+/* Content */
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 7px;
+    color: #1e1b4b;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.notification-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Time */
+
+.notification-time {
+    color: #94a3b8;
+    font-size: 12px;
+    white-space: nowrap;
+    background: #f8f7ff;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .company-notification {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .notification-card {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .notification-header h1 {
+        font-size: 27px;
+    }
+
+    .notification-card {
+        padding: 17px;
+    }
+
+    .notification-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
+    }
+
+    .notification-time {
+        display: none;
+    }
+}
