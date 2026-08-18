@@ -1,0 +1,804 @@
+.company-profile-page {
+    margin-left: 240px;
+    min-height: 100vh;
+    padding: 32px 35px 50px;
+    background: #f5f7fb;
+}
+
+
+/* ================= HEADER ================= */
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.page-badge {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #7c3aed;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 30px;
+}
+
+.profile-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.edit-profile-btn,
+.save-profile-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-profile-btn {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.2);
+}
+
+.save-profile-btn {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.edit-profile-btn:hover,
+.save-profile-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================= HERO ================= */
+
+.profile-hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 185px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+    margin-bottom: 22px;
+}
+
+.hero-background {
+    height: 90px;
+
+    background:
+        radial-gradient(circle at 10% 20%,
+            rgba(255, 255, 255, 0.2),
+            transparent 25%),
+        linear-gradient(135deg,
+            #6d28d9,
+            #4f46e5);
+}
+
+.profile-hero-content {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 0 30px 25px;
+    margin-top: -35px;
+}
+
+
+/* ================= LOGO ================= */
+
+.company-logo-wrapper {
+    position: relative;
+}
+
+.company-logo {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 22px;
+
+    background: white;
+
+    border: 5px solid white;
+
+    color: #6d28d9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.logo-edit {
+    position: absolute;
+
+    right: -5px;
+    bottom: -5px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background: #7c3aed;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================= COMPANY INFO ================= */
+
+.company-main-info {
+    padding-top: 32px;
+}
+
+.company-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-title-row h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 25px;
+}
+
+.verified-badge {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+    color: #15803d;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.company-industry {
+    margin: 5px 0 10px;
+
+    color: #7c3aed;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.company-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================= STATS ================= */
+
+.profile-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.profile-stat-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    border: 1px solid #eef0f5;
+
+    transition: 0.3s;
+}
+
+.profile-stat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.purple-card .stat-icon {
+    background: #ede9fe;
+}
+
+.blue-card .stat-icon {
+    background: #dbeafe;
+}
+
+.orange-card .stat-icon {
+    background: #ffedd5;
+}
+
+.green-card .stat-icon {
+    background: #dcfce7;
+}
+
+.profile-stat-card span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.profile-stat-card h2 {
+    margin: 3px 0;
+
+    color: #172033;
+
+    font-size: 25px;
+}
+
+.profile-stat-card small {
+    color: #16a34a;
+
+    font-size: 11px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.profile-content-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.9fr);
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+.profile-left,
+.profile-right {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ================= BOX ================= */
+
+.profile-box {
+    background: white;
+
+    border: 1px solid #e9edf3;
+
+    border-radius: 17px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.box-header>div {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    background: #ede9fe;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+.box-header h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 18px;
+}
+
+.box-header p {
+    margin: 4px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-text {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.about-textarea {
+    width: 100%;
+
+    min-height: 130px;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #334155;
+}
+
+.about-textarea:focus {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+
+/* ================= INFORMATION ================= */
+
+.information-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-field {
+    grid-column: 1 / -1;
+}
+
+.info-field label {
+    margin-bottom: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.info-field input,
+.info-field select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: #334155;
+
+    background: white;
+
+    font-size: 13px;
+}
+
+.info-field input:disabled,
+.info-field select:disabled {
+    background: #f8fafc;
+
+    color: #64748b;
+}
+
+.info-field input:focus,
+.info-field select:focus {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.07);
+}
+
+
+/* ================= PREFERENCES ================= */
+
+.preference-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.preference-tags span {
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #f3f0ff;
+
+    color: #6d28d9;
+
+    border: 1px solid #e9ddff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #f3f0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.contact-row small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.contact-row strong {
+    color: #334155;
+
+    font-size: 13px;
+
+    word-break: break-word;
+}
+
+.contact-row input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 7px 9px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+/* ================= COMPLETION ================= */
+
+.completion-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+.completion-header h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 17px;
+}
+
+.completion-header p {
+    margin: 5px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.completion-header strong {
+    color: #7c3aed;
+
+    font-size: 22px;
+}
+
+.progress-bar {
+    height: 8px;
+
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ede9fe;
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: linear-gradient(90deg,
+            #7c3aed,
+            #4f46e5);
+}
+
+.completion-message {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* ================= ACCOUNT ================= */
+
+.account-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #f8f7ff);
+}
+
+.account-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.account-box h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 16px;
+}
+
+.account-box p {
+    margin: 5px 0 7px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.active-status {
+    color: #16a34a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .company-profile-page {
+        margin-left: 0;
+
+        padding: 25px 20px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .profile-header button {
+        width: auto;
+    }
+
+    .profile-hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .company-profile-page {
+        padding: 20px 15px;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-field {
+        grid-column: auto;
+    }
+
+    .profile-hero {
+        min-height: auto;
+    }
+
+    .profile-hero-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: -25px;
+    }
+
+    .company-main-info {
+        padding-top: 0;
+    }
+
+    .company-title-row {
+        flex-wrap: wrap;
+    }
+
+    .company-meta {
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .profile-box {
+        padding: 20px;
+    }
+
+    .edit-profile-btn,
+    .save-profile-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,71 @@
+/* =========================
+   COMPANY SIDEBAR
+========================= */
+
+.company-sidebar {
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1e1b4b, #312e81);
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 4px 0 20px rgba(30, 27, 75, 0.15);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+    text-align: center;
+    margin: 5px 0 35px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.company-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.company-sidebar nav button {
+    width: 100%;
+    padding: 13px 15px;
+    border: none;
+    background: transparent;
+    color: #e0e7ff;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover */
+
+.company-sidebar nav button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    transform: translateX(3px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+    .company-sidebar {
+        display: none;
+    }
+}
